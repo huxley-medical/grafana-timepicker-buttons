@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './css/TimepickerButton.css';
 import { TimepickerData } from './types';
-import { changeTimeRange, getPrettyDate } from './utils';
+import { changeTimeRangeAndVariable, getPrettyDate } from './utils';
 import { Select } from '@grafana/ui';
 import { SelectableValue } from '@grafana/data';
 
@@ -13,7 +13,7 @@ interface TimepickerSelectProps {
 export class TimepickerSelect extends Component<TimepickerSelectProps> {
   handleChange = (selectedOption: SelectableValue) => {
     const selected: TimepickerData = this.props.timepickerData[selectedOption.value];
-    changeTimeRange(selected.time_from, selected.time_to);
+    changeTimeRangeAndVariable(selected.time_from, selected.time_to, selected.variableName, selected.variableValue);
   };
 
   render() {

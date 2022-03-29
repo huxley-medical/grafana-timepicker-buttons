@@ -15,7 +15,7 @@ A Grafana panel which allows you to create a list of buttons which set specific 
 
 This plugin works with Grafana 7.0.0 and up.
 
-For older versions, check out the [releases](https://github.com/WilliamVenner/grafana-timepicker-buttons/releases) page.
+For older versions, check out the [releases](https://github.com/suever/grafana-timepicker-buttons/releases) page.
 
 --------
 
@@ -24,10 +24,10 @@ For older versions, check out the [releases](https://github.com/WilliamVenner/gr
 ```bash
 sudo service grafana-server stop
 cd /var/lib/grafana/plugins
-sudo git clone https://github.com/WilliamVenner/grafana-timepicker-buttons
-sudo mv grafana-timepicker-buttons williamvenner-timepickerbuttons-panel
-sudo chown grafana:grafana williamvenner-timepickerbuttons-panel -R
-sudo chmod 774 williamvenner-timepickerbuttons-panel -R
+sudo git clone https://github.com/suever/grafana-timepicker-buttons
+sudo mv grafana-timepicker-buttons suever-timepickerbuttons-panel
+sudo chown grafana:grafana suever-timepickerbuttons-panel -R
+sudo chmod 774 suever-timepickerbuttons-panel -R
 sudo service grafana-server start
 ```
 

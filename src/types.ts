@@ -5,6 +5,8 @@ export type TimepickerData = {
   isPrimary?: boolean;
   isCurrentTime: boolean;
   errors: string[];
+  variableName?: string;
+  variableValue?: string;
 };
 export interface SimpleOptions {
   displayStyle: string;
@@ -14,4 +16,6 @@ export interface SimpleOptions {
   buttonTextOption?: string;
   primaryFieldOption?: string;
   primaryFieldValueOption?: string;
+  variableNameOption?: string;
+  variableValueFieldOption?: string;
 }

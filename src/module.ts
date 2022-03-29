@@ -65,6 +65,23 @@ export const plugin = new PanelPlugin<SimpleOptions>(Panel).setPanelOptions((bui
       category: ['Field Mapping'],
       editor: FieldSelectEditor,
     })
+    .addTextInput({
+      path: 'variableNameOption',
+      name: 'Template Variable Name',
+      description: 'The template variable name to set',
+      defaultValue: '',
+      category: ['Field Mapping'],
+    })
+    .addCustomEditor({
+      id: 'variableValueFieldOption',
+      path: 'variableValueFieldOption',
+      name: 'Template Variable Value Field',
+      description: 'The field that will be used as the value for the template variable',
+      defaultValue: '',
+      category: ['Field Mapping'],
+      editor: FieldSelectEditor,
+      showIf: (config) => config.variableNameOption !== '',
+    })
     .addCustomEditor({
       id: 'primaryFieldOption',
       path: 'primaryFieldOption',

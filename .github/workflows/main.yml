@@ -78,6 +78,7 @@ jobs:
       - name: Sign plugin
         run: yarn sign
         env:
+          ROOT_URLS: ${{ secrets.ALLOWED_ROOT_URLS }}
           GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }} # Requires a Grafana API key from Grafana.com.
 
       - name: Get plugin metadata
@@ -118,11 +119,11 @@ jobs:
 
       - name: Lint plugin
         run: |
-          git clone https://github.com/grafana/plugin-validator
+          git clone https://github.com/grafana/plugin-validator --branch v0.6.2
           pushd ./plugin-validator/cmd/plugincheck
           go install
           popd
-          plugincheck ${{ steps.metadata.outputs.archive }}
+          # plugincheck ${{ steps.metadata.outputs.archive }}
 
       - name: Create release
         id: create_release

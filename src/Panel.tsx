@@ -24,6 +24,8 @@ export const Panel: React.FC<Props> = ({ options, data, width, height }) => {
         time_from: series.fields.find((field) => field.name === options.timeFromOption)?.values.get(i),
         time_to: series.fields.find((field) => field.name === options.timeToOption)?.values.get(i),
         isCurrentTime: false,
+        variableName: options.variableNameOption,
+        variableValue: series.fields.find((field) => field.name === options.variableValueFieldOption)?.values.get(i),
         errors: [],
       };
 
@@ -112,6 +114,8 @@ function buttonFactory(buttons: TimepickerData[]) {
       time_to={button.time_to}
       isPrimary={button.isPrimary || false}
       isCurrentTime={button.isCurrentTime}
+      variableName={button.variableName}
+      variableValue={button.variableValue}
       errors={button.errors}
     />
   ));
