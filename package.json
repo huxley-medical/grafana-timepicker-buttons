@@ -1,5 +1,5 @@
 {
-  "name": "suever-timepickerbuttons-panel",
+  "name": "huxley-timepickerbuttons-panel",
   "version": "1.0.0",
   "description": "Datasource-configured buttons panel plugin which set the time range of your Grafana dashboard",
   "scripts": {
@@ -9,11 +9,11 @@
     "sign": "grafana-toolkit plugin:sign --rootUrls ${ROOT_URLS}",
     "test": "grafana-toolkit plugin:test"
   },
-  "repository": "github:suever/grafana-timepicker-buttons",
-  "author": "William Venner <william@venner.io> (https://github.com/suever)",
+  "repository": "github:huxley-medical/grafana-timepicker-buttons",
+  "author": "William Venner <william@venner.io> (https://github.com/huxley-medical)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/suever/grafana-timepicker-buttons/issues",
+    "url": "https://github.com/huxley-medical/grafana-timepicker-buttons/issues",
     "email": "william@venner.io"
   },
   "devDependencies": {
